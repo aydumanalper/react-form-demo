@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# Modern Secure Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern and secure form application built with **React**, **TypeScript**, and **Vite**. It uses **React Hook Form** for efficient form handling, **Zod** for schema-based validation, and **React Hook Form Resolver** to seamlessly integrate the two.  
 
-Currently, two official plugins are available:
+The form is designed with best practices in validation, security, and scalability, offering a clean and robust user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **Efficient Form Handling**: Built with React Hook Form for high performance.
+- **Schema-based Validation**: Uses Zod for strong and type-safe validation.
+- **TypeScript Integration**: Ensures type safety and developer-friendly coding.
+- **Vite for Development**: Lightning-fast development environment.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## What I Learned
 
-- Configure the top-level `parserOptions` property like this:
+- Creating scalable forms with React Hook Form.
+- Implementing schema-based validation with Zod.
+- Combining form resolvers for seamless validation integration.
+- Using Vite to optimize development and build processes.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
